@@ -1,0 +1,98 @@
+:root {
+  --bg-header: #409fd3;
+  --bg-header-border: #000203;
+  --color-primary: #f4f8ff;
+
+  --bg-btn-control: #73bfe8;
+  --bg-hover-btn-control: #70abcb;
+  --bg-active-btn-control: #97c9e2;
+
+  --font-primary: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header {
+  background-color: var(--bg-header);
+  width: 100%;
+  padding: 15px 0 15px 0;
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--bg-header-border);
+  
+  color: var(--color-primary);
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+/* containers */
+
+#container-image {
+  display: block;
+  background-color: rgb(26, 26, 26);
+  width: min(calc(100% - 40px), 550px);
+  height: 400px;
+  margin: 30px auto 30px auto;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#container-control {
+  display: flex;
+  width: min(calc(100% - 40px), 550px);
+  margin: 30px auto 30px auto;
+}
+
+#container-control > div {
+  width: 33.3%;
+}
+
+#container-control > div:nth-child(2) { text-align: center; }
+#container-control > div:nth-child(3) { text-align: right; }
+
+/* components */
+
+.image {
+  display: block;
+  position: relative;
+  top: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+/* buttons */
+
+.btn-control {
+  background-color: var(--bg-btn-control);
+  height: 45px;
+  width: 45px;
+  margin: 0 3px 0 3px;
+  border: none;
+  border-radius: 3px;
+
+  color: var(--color-primary);
+  font-size: 18pt;
+}
+
+.btn-control:hover { background-color: var(--bg-hover-btn-control); }
+.btn-control:active { background-color: var(--bg-active-btn-control); }
+
+/* style classes */
+
+button.flip-X {
+  transform: rotate(180deg);
+}
+
+/* animations */
+
+@keyframes anim {
+  from {
+    filter: blur(5px)
+  }
+
+  to {
+    filter: blur(0);
+  }
+}
